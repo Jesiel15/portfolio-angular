@@ -1,7 +1,33 @@
 <mat-toolbar
   color="primary"
-  class="fade-menu"
-  [ngClass]="{ 'fade-out': isScrolled }"
+  class="app-toolbar"
+  [ngClass]="{ fade: isScrolled }"
 >
-  <span>Logo</span>
+  <button mat-icon-button (click)="drawer.toggle()" class="menu-toggle">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">Meu App</span>
+  <span class="spacer"></span>
+  <div class="desktop-menu">
+    <a mat-button routerLink="/inicio">Início</a>
+    <a mat-button routerLink="/sobre">Sobre</a>
+    <a mat-button routerLink="/portfolio">Portfólio</a>
+    <a mat-button routerLink="/contato">Contato</a>
+  </div>
 </mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer mode="side" opened class="sidenav">
+    <!-- <mat-nav-list> -->
+    <!-- <a mat-list-item routerLink="/inicio">Primeira seção</a>
+      <a mat-list-item routerLink="/sobre">Segunda seção</a>
+      <a mat-list-item routerLink="/portfolio">Terceira seção</a>
+      <a mat-list-item routerLink="/contato">Quarta seção</a> -->
+    <!-- </mat-nav-list> -->
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content-container">
+    <app-inicio></app-inicio>
+    <app-sobre></app-sobre>
+  </mat-sidenav-content>
+</mat-sidenav-container>

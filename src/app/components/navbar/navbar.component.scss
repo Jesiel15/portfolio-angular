@@ -1,12 +1,68 @@
-/* navbar.component.scss */
-.fade-menu {
-  transition: opacity 0.5s ease;
+.app-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 20px;
+  transition: opacity 0.3s ease, top 0.3s ease;
 }
 
-.fade-out {
+.app-toolbar.fade {
   opacity: 0;
+  top: -64px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.desktop-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.desktop-menu a {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.sidenav-container {
+  display: flex;
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content-container {
+  margin-top: 64px; /* Espaço para o navbar fixo */
+  padding: 20px;
+}
+
+mat-toolbar {
+  background-color: #3f51b5;
+}
+
+mat-sidenav-content {
+  margin-top: 64px; /* Para garantir que o conteúdo não fique atrás do navbar fixo */
 }

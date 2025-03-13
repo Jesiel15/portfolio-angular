@@ -7,12 +7,16 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  isScrolled: boolean = false; // Variável para controlar o estado de rolagem
+
   constructor() {}
 
-  isScrolled = false;
+  ngOnInit(): void {}
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
+  // Evento de rolagem da janela
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event): void {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollTop > 50; // Se a rolagem for maior que 50px, o navbar começa a sumir
   }
 }
