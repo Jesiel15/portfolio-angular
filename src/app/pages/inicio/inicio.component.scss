@@ -1,4 +1,21 @@
-.container-inicio{
+.container-inicio {
   width: 100%;
-  background-color: aquamarine;
+  height: 100vh;
+  color: white;
+}
+
+.container-inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/bg/fundo.jpeg");
+  z-index: 1;
+}
+
+.container-inicio > * {
+  position: relative;
+  z-index: 2;
 }

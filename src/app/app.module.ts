@@ -7,7 +7,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NavbarModule } from './components/navbar/navbar.module';
 import { RouterModule } from '@angular/router';
 import { InicioModule } from './pages/inicio/inicio.module';
-import { SobreModule } from "./pages/sobre/sobre.module";
+import { SobreModule } from './pages/sobre/sobre.module';
+import { PortfolioModule } from './pages/portfolio/portfolio.module';
+import { ContatoModule } from './pages/contato/portfolio.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,8 +21,10 @@ import { SobreModule } from "./pages/sobre/sobre.module";
     NavbarModule,
     InicioModule,
     SobreModule,
+    PortfolioModule,
+    ContatoModule,
     RouterModule.forRoot([]),
-],
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
