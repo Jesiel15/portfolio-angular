@@ -10,7 +10,7 @@
 
 .app-toolbar.fade {
   opacity: 0;
-  top: -64px;
+  top: -64px; /* Ajusta a navbar para sair da tela */
 }
 
 .menu-toggle {
@@ -47,16 +47,20 @@
 
 .sidenav-container {
   display: flex;
-  height: 100%;
+  // height: 100%;
+  background-color: #3f51b5;
 }
 
 .sidenav {
   width: 250px;
+  background-color: #3f51b5;
 }
 
 .content-container {
   margin-top: 64px; /* Espaço para o navbar fixo */
-  padding: 20px;
+  width: 80%;
+  // overflow-x: auto; /* Permite rolagem horizontal */
+  // overflow-y: hidden; /* Remove a rolagem vertical */
 }
 
 mat-toolbar {
@@ -65,4 +69,5 @@ mat-toolbar {
 
 mat-sidenav-content {
   margin-top: 64px; /* Para garantir que o conteúdo não fique atrás do navbar fixo */
+  // overflow-y: hidden; /* Remove a rolagem vertical */
 }

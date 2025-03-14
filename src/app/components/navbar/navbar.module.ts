@@ -19,6 +19,7 @@ import { SobreModule } from '../../pages/sobre/sobre.module';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    MatToolbarModule,
     InicioModule,
     SobreModule,
   ],

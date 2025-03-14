@@ -1,7 +1,7 @@
 <mat-toolbar
   color="primary"
   class="app-toolbar"
-  [ngClass]="{ fade: isScrolled }"
+  [ngClass]="{ fade: !isScrolled }"
 >
   <button mat-icon-button (click)="drawer.toggle()" class="menu-toggle">
     <mat-icon>menu</mat-icon>
@@ -18,16 +18,6 @@
 
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer mode="side" opened class="sidenav">
-    <!-- <mat-nav-list> -->
-    <!-- <a mat-list-item routerLink="/inicio">Primeira seção</a>
-      <a mat-list-item routerLink="/sobre">Segunda seção</a>
-      <a mat-list-item routerLink="/portfolio">Terceira seção</a>
-      <a mat-list-item routerLink="/contato">Quarta seção</a> -->
-    <!-- </mat-nav-list> -->
+    <!-- Conteúdo do menu lateral -->
   </mat-sidenav>
-
-  <mat-sidenav-content class="content-container">
-    <app-inicio></app-inicio>
-    <app-sobre></app-sobre>
-  </mat-sidenav-content>
 </mat-sidenav-container>
