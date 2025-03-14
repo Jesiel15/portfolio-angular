@@ -9,3 +9,32 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+
+#inicio,
+#sobre {
+  padding: 50px;
+  min-height: 100vh; /* Garante que cada seção tenha pelo menos o tamanho da tela */
+  background-color: #f5f5f5;
+}
+
+#inicio {
+  background-color: #e3f2fd; /* Cor de fundo para a seção de Início */
+}
+
+#sobre {
+  background-color: #c8e6c9; /* Cor de fundo para a seção de Sobre */
+}
+
+/* Ajuste o navbar para sempre aparecer fixo */
+.app-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

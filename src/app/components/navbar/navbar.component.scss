@@ -8,9 +8,13 @@
   transition: opacity 0.3s ease, top 0.3s ease;
 }
 
+.app-toolbar.hidden {
+  display: none; /* Esconde a navbar completamente */
+}
+
 .app-toolbar.fade {
-  opacity: 0;
-  top: -64px; /* Ajusta a navbar para sair da tela */
+  // opacity: 0; /* Fade out da navbar */
+  top: -64px; /* Ajusta a navbar para fora da tela */
 }
 
 .menu-toggle {
@@ -64,7 +68,7 @@
 }
 
 mat-toolbar {
-  background-color: #3f51b5;
+  background-color: rgb(255, 195, 155);
 }
 
 mat-sidenav-content {

@@ -1,23 +1,23 @@
 <mat-toolbar
   color="primary"
   class="app-toolbar"
-  [ngClass]="{ fade: !isScrolled }"
+  [ngClass]="{ hidden: !isScrolled }"
 >
-  <button mat-icon-button (click)="drawer.toggle()" class="menu-toggle">
+  <button mat-icon-button (click)="scrollToTop()" class="menu-toggle">
     <mat-icon>menu</mat-icon>
   </button>
   <span class="title">Meu App</span>
   <span class="spacer"></span>
   <div class="desktop-menu">
-    <a mat-button routerLink="/inicio">Início</a>
-    <a mat-button routerLink="/sobre">Sobre</a>
-    <a mat-button routerLink="/portfolio">Portfólio</a>
-    <a mat-button routerLink="/contato">Contato</a>
+    <a mat-button href="#inicio" (click)="onNavigate($event, 'inicio')"
+      >Início</a
+    >
+    <a mat-button href="#sobre" (click)="onNavigate($event, 'sobre')">Sobre</a>
+    <a mat-button href="#portfolio" (click)="onNavigate($event, 'portfolio')"
+      >Portfólio</a
+    >
+    <a mat-button href="#contato" (click)="onNavigate($event, 'contato')"
+      >Contato</a
+    >
   </div>
 </mat-toolbar>
-
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer mode="side" opened class="sidenav">
-    <!-- Conteúdo do menu lateral -->
-  </mat-sidenav>
-</mat-sidenav-container>

@@ -5,11 +5,12 @@ import { MatSidenav } from '@angular/material/sidenav';
   selector: 'app-navbar',
   standalone: false,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   isScrolled: boolean = false; // Variável para controlar se a navbar deve aparecer
   lastScrollTop: number = 0; // Variável para armazenar a posição da rolagem anterior
+  isFading: boolean = false; // Variável para controlar o efeito de fade
 
   @ViewChild('drawer') drawer!: MatSidenav; // Referência para o mat-sidenav (se for usado)
 
@@ -17,19 +18,35 @@ export class NavbarComponent {
 
   ngOnInit(): void {}
 
-  // Evento de rolagem da janela
+  // Intercepta a rolagem para verificar a posição
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-    // Se o usuário rolar para baixo, a navbar deve aparecer
-    if (scrollTop > 0 && scrollTop > this.lastScrollTop) {
-      this.isScrolled = true; // A navbar aparece
-    } else {
-      this.isScrolled = false; // A navbar some
+    // Verifica se o topo da seção "sobre" está visível
+    const sobreElement = document.getElementById('sobre');
+    if (sobreElement) {
+      const sobrePosition = sobreElement.offsetTop;
+      if (scrollY >= sobrePosition - window.innerHeight) {
+        this.isScrolled = true; // Mostra a navbar quando a seção "Sobre" é atingida
+      } else {
+        this.isScrolled = false; // Esconde a navbar quando não estiver na seção "Sobre"
+      }
     }
+  }
 
-    // Atualiza a posição da rolagem
-    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Não permite valores negativos
+  // Função de navegação para seções específicas
+  onNavigate(event: MouseEvent, section: string): void {
+    event.preventDefault(); // Impede o comportamento padrão de navegação
+
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Função de rolagem para o topo
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
