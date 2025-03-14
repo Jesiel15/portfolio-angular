@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  // background-position: center center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.hero__wrapper {
+  text-align: left; // melhor ainda que center aqui, já que quer simular um "código HTML"
+}
+
+.hero__text {
+  margin: 0;
+  font-size: 35px;
+  color: #ffffff;
+  text-shadow: black 0.2em 0.1em 0.1em;
+  // margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.hero__title {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  padding-left: 1em; // 👈 se quiser manter o alinhamento como se fosse código
+
+  .typing__module .typed {
+    display: inline-block;
+    color: #00ffff;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 320px) {
+  .hero__title {
+    font-size: calc(4.54545vw + 25.45455px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 80px;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

@@ -18,7 +18,11 @@ import { ContatoModule } from './pages/contato/portfolio.module';
     AppRoutingModule,
     MatSlideToggleModule,
     BrowserModule,
+
+    // Components
     NavbarModule,
+
+    // Pages
     InicioModule,
     SobreModule,
     PortfolioModule,
