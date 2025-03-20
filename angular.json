@@ -40,8 +40,7 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.scss",
               "node_modules/swiper/swiper-bundle.css"
-            ],
-            "scripts": ["node_modules/swiper/swiper-bundle.min.js"]
+            ]
           },
           "configurations": {
             "production": {
@@ -99,7 +98,7 @@
               "src/styles.scss",
               "node_modules/swiper/swiper-bundle.css"
             ],
-            "scripts": ["node_modules/swiper/swiper-bundle.min.js"]
+            "scripts": []
           }
         }
       }
