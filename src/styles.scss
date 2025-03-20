@@ -1,9 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+Fundo primário	#0D2020	Cor de fundo base
+Fundo secundário	#1A2F2F	Cards, seções, containers
+Texto principal	#E0F0F0	Texto principal claro (alta legibilidade)
+Texto secundário	#A8C0C0	Subtítulos, descrições
+Cor destaque	#00FFFF	Botões, links, hover, elementos ativos
+Cor de apoio suave	#00B3B3	Variação suave do ciano
+Acento neutro	#1E3A3A	Bordas, separadores
+Erro / Alerta	#FF4C4C	Mensagens de erro, alerta visual
+*/
+
+// #0087e7 azul
+// #e3f2fd azul pastel
+
+:root {
+  --color-bg-primary: #0d2020;
+  --color-bg-secondary: #1a2f2f;
+  --color-text-primary: #e0f0f0;
+  --color-text-secondary: #a8c0c0;
+  --color-accent: #00ffff;
+  --color-accent-soft: #00b3b3;
+  --color-border: #1e3a3a;
+  --color-error: #ff4c4c;
+  --color-navbar-primary: #1a2f2f;
+  --color-navbar-secondary: #102828;
+  --color-navbar-tertiary: #193535;
+  --color-navbar-quaternary: #1e3a3a;
+  --color-white: #ffffff;
+}
 
 html,
 body {
   height: 100%;
-  background-color: #e1eff8;
+  background-color: var(--color-bg-primary);
+
+  // Alterando as cores dos textos
+  h1 {
+    color: var(--color-text-primary);
+  }
+  div {
+    color: var(--color-text-secondary);
+  }
 }
 
 body {

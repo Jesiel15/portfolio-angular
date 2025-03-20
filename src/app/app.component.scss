@@ -10,20 +10,34 @@
   flex: 1 1 auto;
 }
 
-
 #inicio,
 #sobre {
   padding: 50px;
   min-height: 100vh; /* Garante que cada seção tenha pelo menos o tamanho da tela */
-  background-color: #f5f5f5;
 }
 
 #inicio {
-  background-color: #e3f2fd; /* Cor de fundo para a seção de Início */
+  background-color: var(
+    --color-bg-primary
+  ); /* Cor de fundo para a seção de Início */
 }
 
 #sobre {
-  background-color: #c8e6c9; /* Cor de fundo para a seção de Sobre */
+  background-color: var(
+    --color-bg-secondary
+  ); /* Cor de fundo para a seção de Sobre */
+}
+
+#portfolio {
+  background-color: var(
+    --color-bg-primary
+  ); /* Cor de fundo para a seção de Sobre */
+}
+
+#contato {
+  background-color: var(
+    --color-bg-secondary
+  ); /* Cor de fundo para a seção de Sobre */
 }
 
 /* Ajuste o navbar para sempre aparecer fixo */
