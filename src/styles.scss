@@ -13,7 +13,7 @@ Erro / Alerta	#FF4C4C	Mensagens de erro, alerta visual
 // #0087e7 azul
 // #e3f2fd azul pastel
 
-@import 'swiper/swiper-bundle.css';
+@import "swiper/swiper-bundle.css";
 
 :root {
   --color-bg-primary: #0d1c1c; /* Fundo base, mais profundo e elegante */
@@ -82,44 +82,3 @@ html {
   padding: 0;
   // overflow-y: auto; /* Isso remove o scroll horizontal */
 }
-
-// nav,
-// ul,
-// li {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-// }
-
-
-
-// Swiper
-.swiper-container {
-  width: 100%;
-  height: 300px;  /* Ajuste conforme necessário */
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.service__icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.service__title {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.service__text {
-  font-size: 16px;
-  color: #555;
-}
-
-// Fim Swiper
