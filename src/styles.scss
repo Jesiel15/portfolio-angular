@@ -13,33 +13,61 @@ Erro / Alerta	#FF4C4C	Mensagens de erro, alerta visual
 // #0087e7 azul
 // #e3f2fd azul pastel
 
+@import 'swiper/swiper-bundle.css';
+
 :root {
-  --color-bg-primary: #0d2020;
-  --color-bg-secondary: #1a2f2f;
-  --color-text-primary: #e0f0f0;
-  --color-text-secondary: #a8c0c0;
-  --color-accent: #00ffff;
-  --color-accent-soft: #00b3b3;
-  --color-border: #1e3a3a;
-  --color-error: #ff4c4c;
-  --color-navbar-primary: #1a2f2f;
-  --color-navbar-secondary: #102828;
-  --color-navbar-tertiary: #193535;
-  --color-navbar-quaternary: #1e3a3a;
+  --color-bg-primary: #0d1c1c; /* Fundo base, mais profundo e elegante */
+  --color-bg-secondary: #166464; /* Cards, painéis e áreas secundárias */
+  --color-surface: #1e3a3a; /* Superfícies de destaque (menus, cards elevados) */
+
+  --color-text-primary: #dff6f6; /* Texto principal claro e suave */
+  --color-text-secondary: #99bdbd; /* Texto de apoio, boa leitura no fundo escuro */
+  --color-text-muted: #6a8a8a; /* Descrições, texto desativado ou menos importante */
+  --color-text: #748182;
+  --color-text-title: #333333;
+
+  --color-accent: #00d9d9; /* Cor vibrante mas menos "neon" que o cyan puro */
+  --color-accent-soft: #009a9a; /* Variação elegante para hover ou detalhes */
+
+  --color-border: #264d4d; /* Bordas definidas com tom frio */
+  --color-border-soft: #1a3535; /* Divisores suaves, sem poluir o visual */
+
+  --color-navbar-primary: #132222; /* Navbar sutil, mais escura que o fundo base */
+  --color-navbar-secondary: #1a2f2f; /* Leve contraste para hover/menu ativo */
+  --color-navbar-tertiary: #225050; /* Detalhes de navbar ou menus */
+  --color-navbar-quaternary: #00d9d9; /* Hover de links e elementos ativos */
+
+  --color-error: #ff5e5e; /* Erro mais suave, sem poluir o layout */
+  --color-warning: #ffc75f; /* Alerta equilibrado */
+  --color-success: #4ee6a1; /* Verde sucesso com boa visibilidade */
+
   --color-white: #ffffff;
+  --color-grey: #f5f5f5;
 }
 
 html,
 body {
   height: 100%;
-  background-color: var(--color-bg-primary);
+  // background-color: var(--color-bg-primary);
 
-  // Alterando as cores dos textos
+  // Alterando as cores dos textos e tamanho
   h1 {
-    color: var(--color-text-primary);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--color-text-title);
+    font-family: Poppins, sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0px;
   }
+
   div {
-    color: var(--color-text-secondary);
+    line-height: 2.1;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Poppins, sans-serif;
+    color: var(--color-text);
   }
 }
 
@@ -62,3 +90,36 @@ html {
 //   padding: 0;
 //   list-style: none;
 // }
+
+
+
+// Swiper
+.swiper-container {
+  width: 100%;
+  height: 300px;  /* Ajuste conforme necessário */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.service__icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.service__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service__text {
+  font-size: 16px;
+  color: #555;
+}
+
+// Fim Swiper
