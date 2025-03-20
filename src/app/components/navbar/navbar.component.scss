@@ -30,15 +30,23 @@
   flex: 1 1 auto;
 }
 
-.desktop-menu {
-  display: flex;
-  gap: 20px;
-}
-
 .desktop-menu a {
   color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.desktop-menu a:hover {
+  color: var(--color-ciano);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); // Um leve fundo pode ajudar na visibilidade
+  // border-radius: 5px;
+}
 @media screen and (max-width: 768px) {
   .desktop-menu {
     display: none;
@@ -68,7 +76,7 @@
 }
 
 mat-toolbar {
-  background-color: rgb(255, 195, 155);
+  background-color: var(--color-bg-secondary);
 }
 
 mat-sidenav-content {

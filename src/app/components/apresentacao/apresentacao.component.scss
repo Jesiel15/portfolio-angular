@@ -18,7 +18,7 @@
 .hero__text {
   margin: 0;
   font-size: 35px;
-  color: #ffffff;
+  color: var(--color-white);
   text-shadow: black 0.2em 0.1em 0.1em;
   // margin-bottom: 20px;
   font-family: "Poppins", sans-serif;
@@ -35,13 +35,13 @@
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-white);
   text-shadow: black 0.2em 0.2em 0.2em;
   padding-left: 1em; // 👈 se quiser manter o alinhamento como se fosse código
 
   .typing__module .typed {
     display: inline-block;
-    color: #00ffff;
+    color: var(--color-cian);
     font-weight: bold;
   }
 }
