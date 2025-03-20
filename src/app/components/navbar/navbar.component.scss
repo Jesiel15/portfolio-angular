@@ -83,3 +83,14 @@ mat-sidenav-content {
   margin-top: 64px; /* Para garantir que o conteúdo não fique atrás do navbar fixo */
   // overflow-y: hidden; /* Remove a rolagem vertical */
 }
+
+.imagem {
+  background-size: contain; /* Ajusta a imagem sem cortar */
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../assets/logo.png");
+  width: 100%;
+  height: 12px; /* Ajuste conforme necessário */
+  padding: 15px; /* Remova o padding excessivo */
+  margin-left: 20px;
+}
