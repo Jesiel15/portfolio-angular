@@ -168,6 +168,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {}
 
   filterProjects(category: string): void {
+    this.onNavigate('portfolio');
     if (category === 'Todos') {
       this.filteredProjects = this.projects;
     } else {
@@ -176,5 +177,13 @@ export class GalleryComponent implements OnInit {
       );
     }
     this.selectedCategory = category;
+  }
+
+  // Função de navegação para seções específicas
+  onNavigate(section: string): void {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
