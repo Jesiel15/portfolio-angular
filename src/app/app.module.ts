@@ -10,6 +10,7 @@ import { InicioModule } from './pages/inicio/inicio.module';
 import { SobreModule } from './pages/sobre/sobre.module';
 import { PortfolioModule } from './pages/portfolio/portfolio.module';
 import { ContatoModule } from './pages/contato/portfolio.module';
+import { RedesSociaisModule } from './pages/redes-sociais/redes-sociais.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { ContatoModule } from './pages/contato/portfolio.module';
     SobreModule,
     PortfolioModule,
     ContatoModule,
+    RedesSociaisModule,
     RouterModule.forRoot([]),
   ],
   providers: [],
