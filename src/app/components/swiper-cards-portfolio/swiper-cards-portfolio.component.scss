@@ -1,0 +1,100 @@
+.swiper-container {
+  padding-top: 10vh;
+  width: 70%;  /* Ajusta a largura para 100% */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.project-card {
+  background: #f4f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999; /* Modal sobrepondo o Swiper */
+  padding: 20px;
+}
+
+.project-details * {
+  pointer-events: auto;
+}
+
+.details-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.details-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.details-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.details-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.details-content button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.details-content button:hover {
+  background-color: #0056b3;
+}
