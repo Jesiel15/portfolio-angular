@@ -41,15 +41,15 @@ Erro / Alerta	#FF4C4C	Mensagens de erro, alerta visual
   --color-warning: #ffc75f; /* Alerta equilibrado */
   --color-success: #4ee6a1; /* Verde sucesso com boa visibilidade */
 
-  --color-white: #ffffff;
-  --color-grey: #f5f5f5;
+  --color-white: #fafdfd;
+  --color-grey: #ecf3f3;
   --color-cyan: #00ffff;
 }
 
 html,
 body {
   height: 100%;
-  // background-color: var(--color-bg-primary);
+  background-color: var(--color-bg-grey);
 
   // Alterando as cores dos textos e tamanho
   h1 {
