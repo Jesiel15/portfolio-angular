@@ -1,0 +1,16 @@
+<div class="filter-container">
+  <button (click)="filterProjects('Todos')" [class.active]="selectedCategory === 'Todos'">Todos</button>
+  <button (click)="filterProjects('Web')" [class.active]="selectedCategory === 'Web'">Web</button>
+  <button (click)="filterProjects('Front')" [class.active]="selectedCategory === 'Front'">Front-end</button>
+  <button (click)="filterProjects('Back')" [class.active]="selectedCategory === 'Back'">Back-end</button>
+</div>
+
+<div class="gallery-container">
+  <div class="gallery-item" *ngFor="let project of filteredProjects">
+    <img [src]="project.image" [alt]="project.title" class="gallery-image" />
+    <div class="project-info">
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+    </div>
+  </div>
+</div>

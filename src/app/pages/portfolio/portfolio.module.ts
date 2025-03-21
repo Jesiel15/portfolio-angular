@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioComponent } from './portfolio.component';
-import { CardPortfolioModule } from '../../components/card-portfolio/card-portfolio.module';
-import { SwiperCardsPortfolioModule } from '../../components/swiper-cards-portfolio/swiper-cards-portfolio.module';
+import { GalleryModule } from '../../components/gallery/gallery.module';
 
 @NgModule({
   declarations: [PortfolioComponent],
-  imports: [CommonModule, SwiperCardsPortfolioModule],
+  imports: [CommonModule, GalleryModule],
   exports: [PortfolioComponent],
 })
 export class PortfolioModule {}
