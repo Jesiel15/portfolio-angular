@@ -1,6 +1,7 @@
 .container-redes-sociais {
   padding-left: 20%;
   background-color: var(--color-bg-primary);
+  padding-bottom: 4%;
 }
 
 /* 15. footer
@@ -44,7 +45,7 @@
 
 .footer__social a {
   color: var(--color-cyan);
-  font-size: 25px; /* Tamanho padrão do ícone */
+  font-size: 30px; /* Tamanho padrão do ícone */
   padding: 0px 16px 16px 16px;
   display: inline-block; /* Garantindo que o link se comporte como um bloco de nível inline */
   transition: transform 0.3s ease; /* Transição suave para o aumento */
