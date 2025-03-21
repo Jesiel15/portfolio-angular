@@ -7,20 +7,21 @@
 .filter-container button {
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: var(--color-grey);
+  border: 0px solid var(--color-grey);
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
 }
 
 .filter-container button.active {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-navbar-tertiary);
+  color: var(--color-cyan);
 }
 
 .filter-container button:hover {
-  background-color: #ddd;
+  background-color: var(--color-cyan);
+  color: var(--color-navbar-primary);
 }
 
 .gallery-container {
@@ -33,11 +34,11 @@
 }
 
 .gallery-item {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: var(--color-grey);
+  // border: 1px solid #ddd;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 6px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-image {
@@ -49,14 +50,4 @@
 .project-info {
   margin-top: 10px;
   text-align: center;
-}
-
-h3 {
-  font-size: 1.25rem;
-  color: #333;
-}
-
-p {
-  font-size: 1rem;
-  color: #666;
 }
