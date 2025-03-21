@@ -18,7 +18,7 @@ export class GalleryComponent implements OnInit {
       title: 'Projeto 2',
       description: 'Descrição do projeto 2.',
       image: 'assets/exemplos/5.jpg',
-      category: 'Front',
+      category: 'Web',
     },
     {
       title: 'Projeto 3',

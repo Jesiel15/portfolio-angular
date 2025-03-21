@@ -6,6 +6,7 @@
 
 h1 {
   padding-top: 8%;
+  padding-bottom: 1%;
 }
 
 p {
@@ -17,7 +18,5 @@ p {
 .link-telefone {
   text-decoration: none;
   font-weight: 600; /* deixa o texto em negrito */
-  color: var(
-    --color-cyan
-  ); /* opcional, se quiser manter a cor do texto normal */
+  color: var(--color-navbar-tertiary);
 }
