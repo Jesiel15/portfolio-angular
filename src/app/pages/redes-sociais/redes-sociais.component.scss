@@ -1,7 +1,6 @@
 .container-redes-sociais {
   padding-left: 20%;
   background-color: var(--color-bg-primary);
-  padding-bottom: 4%;
 }
 
 /* 15. footer
@@ -61,6 +60,25 @@
   margin-bottom: 0;
   font-weight: 300;
 }
+
+
+.copyright {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding-top: 80px;
+  font-size: 1rem;
+  color: var(--color-text-primary); /* Cor do texto padrão */
+  background-color: var(--color-bg-primary);
+  margin: 0;
+}
+
+.heart-icon {
+  font-size: 1.2rem; /* Ajuste o tamanho do coração */
+  color: red; /* Cor ciano */
+  margin-right: 1%; /* Distância entre o coração e o texto */
+}
+
 
 @media (min-width: 993px) {
   .footer {
