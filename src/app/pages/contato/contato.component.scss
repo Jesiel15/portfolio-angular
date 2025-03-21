@@ -1,3 +1,22 @@
-.container-contato{
+.container-contato {
   padding-left: 20%;
+  background-color: var(--color-grey);
+}
+
+h1 {
+  padding-top: 8%;
+}
+
+p {
+  // color: var(--color-white);
+  margin: 0;
+}
+
+.link-email,
+.link-telefone {
+  text-decoration: none;
+  font-weight: 600; /* deixa o texto em negrito */
+  color: var(
+    --color-cyan
+  ); /* opcional, se quiser manter a cor do texto normal */
 }
