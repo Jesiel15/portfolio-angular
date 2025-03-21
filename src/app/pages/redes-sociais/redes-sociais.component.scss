@@ -2,3 +2,67 @@
   padding-left: 20%;
   background-color: var(--color-bg-primary);
 }
+
+/* 15. footer
+--------------------------------------------------------------------------------*/
+
+.footer {
+  position: relative;
+  // background-color: #373737;
+  // color: #fff;
+  text-align: center;
+  padding: 40px 0;
+  width: 75%;
+}
+
+.footer #back-to-top {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -20px;
+  height: 40px;
+  line-height: 48px;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 36px;
+  text-align: center;
+  z-index: 1;
+}
+
+.footer__wrapper {
+  position: relative;
+}
+
+.footer__social {
+  margin-bottom: 0;
+}
+
+.footer__social a {
+  color: var(--color-cyan);
+  font-size: 25px; /* Tamanho padrão do ícone */
+  padding: 0px 16px 16px 16px;
+  display: inline-block; /* Garantindo que o link se comporte como um bloco de nível inline */
+  transition: transform 0.3s ease; /* Transição suave para o aumento */
+}
+
+.footer__social a:hover {
+  color: var(--color-white);
+  transform: scale(1.3); /* Aumenta o ícone em 30% */
+}
+
+.footer__copy {
+  color: var(--color-white);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+@media (min-width: 993px) {
+  .footer {
+    padding: 80px 0;
+  }
+}
