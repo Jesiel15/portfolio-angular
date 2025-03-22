@@ -9,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class GalleryComponent implements OnInit {
   projects = [
     {
-      title: 'Projeto 1',
-      description: 'Descrição do projeto 1.',
-      image: 'assets/exemplos/1.jpg',
-      category: 'Front',
+      title: 'Super Heros',
+      description:
+        'Projeto criado para ideias de heróis com seus poderes e características',
+      image: 'assets/superheros/superheros1.png',
+      category: 'Fullstack',
     },
     {
       title: 'Projeto 2',
