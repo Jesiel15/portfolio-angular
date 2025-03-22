@@ -55,7 +55,7 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Projeto 8',
       description: 'Descrição do projeto 8.',
-      image: 'assets/exemplos/8.jpg',
+      image: 'assets/exemplos/7.jpg',
       category: 'Back',
     },
     {
@@ -68,7 +68,7 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Projeto 8',
       description: 'Descrição do projeto 8.',
-      image: 'assets/exemplos/8.jpg',
+      image: 'assets/exemplos/7.jpg',
       category: 'Web',
     },
     {
@@ -130,7 +130,7 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Projeto 8',
       description: 'Descrição do projeto 8.',
-      image: 'assets/exemplos/8.jpg',
+      image: 'assets/exemplos/7.jpg',
       category: 'Back',
     },
     {
@@ -143,7 +143,7 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Projeto 8',
       description: 'Descrição do projeto 8.',
-      image: 'assets/exemplos/8.jpg',
+      image: 'assets/exemplos/7.jpg',
       category: 'Web',
     },
     {
