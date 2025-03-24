@@ -11,15 +11,15 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Super Heros',
       description:
-        'Projeto criado para ideias de heróis com seus poderes e características',
+        'Projeto criado para ideias de heróis com seus poderes e características.',
       image: 'assets/superheros/superheros1.png',
       category: 'Fullstack',
     },
     {
-      title: 'Projeto 2',
-      description: 'Descrição do projeto 2.',
-      image: 'assets/exemplos/5.jpg',
-      category: 'Web',
+      title: 'Vejoflix',
+      description: 'Projeto criado para salvar vídeos por categorias.',
+      image: 'assets/vejoflix/vejoflix2.png',
+      category: 'Fullstack',
     },
     {
       title: 'Projeto 3',

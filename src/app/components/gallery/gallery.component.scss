@@ -43,6 +43,7 @@
 
 .gallery-image {
   width: 100%;
+  min-height: 150px; // Retirar caso queira que seja auto
   height: auto;
   border-radius: 8px;
 }
