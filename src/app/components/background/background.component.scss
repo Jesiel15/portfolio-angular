@@ -12,12 +12,16 @@
   overflow: hidden;
   animation: FadeIn 3.1s ease-out;
   user-select: none;
-  background-color: blueviolet;
+  // background-color: blueviolet;
 }
 
 @keyframes FadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 $duration: 120s;
@@ -32,6 +36,14 @@ $height: 10%;
   height: 70px;
   animation: Float $duration linear infinite, FadeFloat $duration infinite;
   z-index: 1;
+
+  i {
+    font-size: 40px; // Tamanho do ícone
+    color: #fff; // Cor do ícone
+    display: block;
+    margin: auto;
+    text-shadow: black 0.2em 0.2em 0.2em;
+  }
 }
 
 .Cloud.Foreground {
@@ -47,13 +59,23 @@ $height: 10%;
 }
 
 @keyframes Float {
-  from { transform: translateX(100%) translateZ(0); }
-  to { transform: translateX(-15%) translateZ(0); }
+  from {
+    transform: translateX(100%) translateZ(0);
+  }
+  to {
+    transform: translateX(-15%) translateZ(0);
+  }
 }
 
 @keyframes FadeFloat {
-  0%, 100% { opacity: 0; }
-  5%, 90% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
 }
 
 // Loop para diferenciar o tempo de animação de cada nuvem
@@ -72,18 +94,14 @@ $height: 10%;
   }
 }
 
-// Adicionando imagens para as nuvens
-.Cloud {
-  background-image: url("/assets/figura.jpg");
-}
-
-.Cloud.Background {
-  background-image: url("/assets/figura.jpg");
-}
-
 // Configuração do body
 body {
-  color: #FFF;
-  background-color: #FD940A;
-  background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
+  color: #fff;
+  background-color: #fd940a;
+  background-image: radial-gradient(
+    circle,
+    #f9a72b 0%,
+    #fa9026 70%,
+    #fb6c1f 100%
+  );
 }
