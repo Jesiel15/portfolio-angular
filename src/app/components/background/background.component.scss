@@ -2,12 +2,12 @@
 
 #Clouds {
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  height: 100vh; // Garante que o contêiner cubra toda a altura da tela
+  height: 110vh; // Garante que o contêiner cubra toda a altura da tela
   width: 100vw; // Garante que o contêiner cubra toda a largura da tela
   overflow: hidden;
   animation: FadeIn 3.1s ease-out;
@@ -24,7 +24,7 @@
   }
 }
 
-$duration: 120s;
+$duration: 90s;
 $height: 10%;
 
 .Cloud {
@@ -33,17 +33,21 @@ $height: 10%;
   background-repeat: no-repeat;
   background-size: contain; // Garante que a imagem se ajuste ao tamanho do elemento sem cortar
   background-position: center; // Centraliza a imagem
-  height: 70px;
+  height: 100px;
   animation: Float $duration linear infinite, FadeFloat $duration infinite;
   z-index: 1;
 
   i {
-    font-size: 40px; // Tamanho do ícone
+    font-size: 50px; // Tamanho do ícone
     color: #fff; // Cor do ícone
     display: block;
     margin: auto;
-    text-shadow: black 0.2em 0.2em 0.2em;
+    text-shadow: rgb(37, 37, 37) 0.05em 0.05em 0.05em;
   }
+}
+
+img {
+  width: 50px;
 }
 
 .Cloud.Foreground {
@@ -79,10 +83,12 @@ $height: 10%;
 }
 
 // Loop para diferenciar o tempo de animação de cada nuvem
-@for $i from 1 through 10 {
+@for $i from 1 through 20 {
+  // Ajuste aqui para o número de ícones
   .Cloud:nth-child(#{$i}) {
     animation-delay: math.div($duration, 6.5) * -1 * $i;
-    top: $i * 6%;
+    top: $i *
+      5%; // Aqui você pode alterar o valor de 6% para aumentar a distância
   }
   .Cloud.Foreground:nth-child(#{$i}) {
     animation-duration: ($duration - ($i * 4));
@@ -95,13 +101,13 @@ $height: 10%;
 }
 
 // Configuração do body
-body {
-  color: #fff;
-  background-color: #fd940a;
-  background-image: radial-gradient(
-    circle,
-    #f9a72b 0%,
-    #fa9026 70%,
-    #fb6c1f 100%
-  );
-}
+// body {
+//   color: #fff;
+//   background-color: #fd940a;
+//   background-image: radial-gradient(
+//     circle,
+//     #f9a72b 0%,
+//     #fa9026 70%,
+//     #fb6c1f 100%
+//   );
+// }
