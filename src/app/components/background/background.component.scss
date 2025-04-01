@@ -1,0 +1,89 @@
+@use "sass:math";
+
+#Clouds {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 100vh; // Garante que o contêiner cubra toda a altura da tela
+  width: 100vw; // Garante que o contêiner cubra toda a largura da tela
+  overflow: hidden;
+  animation: FadeIn 3.1s ease-out;
+  user-select: none;
+  background-color: blueviolet;
+}
+
+@keyframes FadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+$duration: 120s;
+$height: 10%;
+
+.Cloud {
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain; // Garante que a imagem se ajuste ao tamanho do elemento sem cortar
+  background-position: center; // Centraliza a imagem
+  height: 70px;
+  animation: Float $duration linear infinite, FadeFloat $duration infinite;
+  z-index: 1;
+}
+
+.Cloud.Foreground {
+  height: $height;
+  min-height: 20px;
+  z-index: 3;
+}
+
+.Cloud.Background {
+  height: math.div($height, 1.1);
+  min-height: 8px;
+  animation-duration: $duration * 1.75;
+}
+
+@keyframes Float {
+  from { transform: translateX(100%) translateZ(0); }
+  to { transform: translateX(-15%) translateZ(0); }
+}
+
+@keyframes FadeFloat {
+  0%, 100% { opacity: 0; }
+  5%, 90% { opacity: 1; }
+}
+
+// Loop para diferenciar o tempo de animação de cada nuvem
+@for $i from 1 through 10 {
+  .Cloud:nth-child(#{$i}) {
+    animation-delay: math.div($duration, 6.5) * -1 * $i;
+    top: $i * 6%;
+  }
+  .Cloud.Foreground:nth-child(#{$i}) {
+    animation-duration: ($duration - ($i * 4));
+    height: ($height + ($i * 2.5));
+  }
+  .Cloud.Background:nth-child(#{$i}) {
+    animation-duration: ($duration * 1.25 - ($i * 4));
+    height: math.div($height, 1.1) - ($i * 1.25);
+  }
+}
+
+// Adicionando imagens para as nuvens
+.Cloud {
+  background-image: url("/assets/figura.jpg");
+}
+
+.Cloud.Background {
+  background-image: url("/assets/figura.jpg");
+}
+
+// Configuração do body
+body {
+  color: #FFF;
+  background-color: #FD940A;
+  background-image: radial-gradient(circle, #F9A72B 0%, #FA9026 70%, #FB6C1F 100%);
+}
