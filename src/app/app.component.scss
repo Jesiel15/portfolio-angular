@@ -20,18 +20,21 @@
   background-color: var(
     --color-bg-primary
   ); /* Cor de fundo para a seção de Início */
+
+  background-image: radial-gradient(
+    circle,
+    var(--color-bg-secondary) 0%,
+    var(--color-surface) 60%,
+    var(--color-bg-primary) 100%
+  );
 }
 
 #sobre {
-  background-color: var(
-    --color-grey
-  ); /* Cor de fundo para a seção de Sobre */
+  background-color: var(--color-grey); /* Cor de fundo para a seção de Sobre */
 }
 
 #portfolio {
-  background-color: var(
-    --color-white
-  ); /* Cor de fundo para a seção de Sobre */
+  background-color: var(--color-white); /* Cor de fundo para a seção de Sobre */
 }
 
 #contato {
