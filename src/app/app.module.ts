@@ -11,7 +11,7 @@ import { SobreModule } from './pages/sobre/sobre.module';
 import { PortfolioModule } from './pages/portfolio/portfolio.module';
 import { ContatoModule } from './pages/contato/portfolio.module';
 import { RedesSociaisModule } from './pages/redes-sociais/redes-sociais.module';
-
+import { CardGalleryModule } from './components/card-gallery/card-gallery.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,6 +22,7 @@ import { RedesSociaisModule } from './pages/redes-sociais/redes-sociais.module';
 
     // Components
     NavbarModule,
+    CardGalleryModule,
 
     // Pages
     InicioModule,

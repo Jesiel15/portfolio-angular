@@ -1,0 +1,24 @@
+<div class="card-wrapper" [ngStyle]="getBackgroundStyle()">
+  <div class="header">
+    <div class="date">
+      <span class="day">{{ day }}</span>
+      <span class="month">{{ month }}</span>
+      <span class="year">{{ year }}</span>
+    </div>
+    <ul class="menu-content">
+      <li>
+        <a href="#" class="fa fa-bookmark-o"></a>
+      </li>
+      <li><a href="#" class="fa fa-heart-o"><span>{{ likes }}</span></a></li>
+      <li><a href="#" class="fa fa-comment-o"><span>{{ comments }}</span></a></li>
+    </ul>
+  </div>
+  <div class="data">
+    <div class="content">
+      <span class="author">{{ author }}</span>
+      <h1 class="title"><a href="#">{{ title }}</a></h1>
+      <p class="text">{{ text }}</p>
+      <a href="#" class="button">Read more</a>
+    </div>
+  </div>
+</div>

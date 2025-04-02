@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+// Variables
+$regal-blue: #034378;
+$san-juan: #2d4e68;
+$bermuda: #77d7b9;
+$white: #fff;
+$black: #000;
+$open-sans: "Open Sans", sans-serif;
+
+.card-wrapper {
+  // background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg)
+  //   center / cover no-repeat;
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+  font-family: $open-sans;
+
+  &:hover {
+    .data {
+      transform: translateY(0);
+    }
+    .menu-content {
+      span {
+        transform: translate(-50%, -10px);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  padding: 1em;
+
+  .date {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+
+    .day {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .month,
+    .year {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.menu-content {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 5px;
+    position: relative;
+
+    a {
+      color: $white;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      font-size: 10px;
+      font-weight: 700;
+      transform: translate(-50%, 0);
+      transition: all 0.3s;
+      opacity: 0;
+    }
+  }
+}
+
+.data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(calc(70px + 4em));
+  transition: transform 0.3s;
+  color: $white;
+
+  .content {
+    padding: 1em;
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.author {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.title {
+  margin: 10px 0;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+}
+
+.text {
+  margin: 0 0 1em;
+  line-height: 1.4;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: $white;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  border: 1px solid $white;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &::after {
+    content: "→";
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    &::after {
+      transform: translate(5px, -50%);
+      opacity: 1;
+    }
+  }
+}
