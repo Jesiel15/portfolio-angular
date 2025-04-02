@@ -11,11 +11,11 @@ $open-sans: "Open Sans", sans-serif;
 .card-wrapper {
   // background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg)
   //   center / cover no-repeat;
-  min-height: 450px;
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
-  font-family: $open-sans;
+  font-family: $open-sans; // TODO: Mudar fonte
 
   &:hover {
     .data {
