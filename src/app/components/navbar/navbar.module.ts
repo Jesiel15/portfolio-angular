@@ -7,8 +7,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 import { NavbarComponent } from './navbar.component';
-import { InicioModule } from '../../pages/inicio/inicio.module';
-import { SobreModule } from '../../pages/sobre/sobre.module';
+import { SobreModule } from '../../pages/secoes/sobre/sobre.module';
+import { InicioModule } from '../../pages/secoes/inicio/inicio.module';
 
 @NgModule({
   declarations: [NavbarComponent],

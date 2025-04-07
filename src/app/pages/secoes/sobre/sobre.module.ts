@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SobreComponent } from './sobre.component';
-import { SlideSwiperModule } from '../../components/slide-swiper/slide-swiper.module';
+import { SlideSwiperModule } from '../../../components/slide-swiper/slide-swiper.module';
 
 @NgModule({
   declarations: [SobreComponent],
