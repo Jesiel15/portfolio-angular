@@ -15,6 +15,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/superheros/superheros1.png',
       category: 'Fullstack',
       tecnologia: 'Angular, Node Js e AWS EC2',
+      projetoNumber: 1,
     },
     {
       title: 'Vejoflix',
@@ -22,6 +23,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/vejoflix/vejoflix2.png',
       category: 'Fullstack',
       tecnologia: 'React js, Node Js e AWS EC2',
+      projetoNumber: 2,
     },
     {
       title: 'Desafio 7 dias',
@@ -31,6 +33,7 @@ export class GalleryComponent implements OnInit {
       category: 'Fullstack',
       tecnologia:
         'Angular, Node JS, PHP, Dockers, Postman, AWS EC2, e Testes unitários.',
+      projetoNumber: 3,
     },
     {
       title: 'Projeto 4',
@@ -38,6 +41,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/5.jpg',
       category: 'Web',
       tecnologia: '',
+      projetoNumber: 4,
     },
     {
       title: 'Projeto 5',
@@ -45,6 +49,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/5.jpg',
       category: 'Web',
       tecnologia: '',
+      projetoNumber: 5,
     },
     {
       title: 'Projeto 6',
@@ -53,6 +58,7 @@ export class GalleryComponent implements OnInit {
 
       category: 'Back',
       tecnologia: '',
+      projetoNumber: 6,
     },
     {
       title: 'Projeto 7',
@@ -60,6 +66,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/7.jpg',
       category: 'Back',
       tecnologia: '',
+      projetoNumber: 7,
     },
     {
       title: 'Projeto 8',
@@ -67,6 +74,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/7.jpg',
       category: 'Back',
       tecnologia: '',
+      projetoNumber: 8,
     },
     {
       title: 'Projeto 9',
@@ -75,13 +83,15 @@ export class GalleryComponent implements OnInit {
 
       category: 'Web',
       tecnologia: '',
+      projetoNumber: 9,
     },
     {
-      title: 'Projeto 8',
-      description: 'Descrição do projeto 8.',
+      title: 'Projeto 10',
+      description: 'Descrição do projeto 10.',
       image: 'assets/exemplos/7.jpg',
       category: 'Web',
       tecnologia: '',
+      projetoNumber: 10,
     },
   ];
 
