@@ -1,6 +1,7 @@
 import { Component, HostListener, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router, NavigationEnd } from '@angular/router';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,12 +17,13 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild('drawer') drawer!: MatSidenav;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private scrollService: ScrollService) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isLandingPage = event.urlAfterRedirects === '/inicio' || event.url === '/';
+        this.isLandingPage =
+          event.urlAfterRedirects === '/inicio' || event.url === '/';
         if (!this.isLandingPage) {
           this.isScrolled = true; // Sempre mostra navbar fora da landing
         }
@@ -45,9 +47,16 @@ export class NavbarComponent implements OnInit {
   onNavigate(event: MouseEvent, section: string): void {
     event.preventDefault();
 
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const currentUrl = this.router.url.split('#')[0];
+
+    if (currentUrl === '/' || currentUrl === '/inicio') {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      this.scrollService.setTarget(section);
+      this.router.navigateByUrl('/');
     }
   }
 
