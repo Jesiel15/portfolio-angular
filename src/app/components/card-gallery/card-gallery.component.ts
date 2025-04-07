@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-gallery',
@@ -17,6 +18,8 @@ export class CardGalleryComponent {
   @Input() comments: number = 0;
   @Input() img: string = '';
 
+  constructor(private router: Router) {}
+
   // Método para obter o estilo do background
   getBackgroundStyle() {
     return {
@@ -25,5 +28,9 @@ export class CardGalleryComponent {
       'background-position': 'center',
       'background-repeat': 'no-repeat',
     };
+  }
+
+  detalharProjeto() {
+    this.router.navigate(['/detalhar-projeto']);
   }
 }

@@ -1,5 +1,6 @@
-import { Component, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,37 +8,42 @@ import { MatSidenav } from '@angular/material/sidenav';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-  isScrolled: boolean = false; // Variável para controlar se a navbar deve aparecer
-  lastScrollTop: number = 0; // Variável para armazenar a posição da rolagem anterior
-  isFading: boolean = false; // Variável para controlar o efeito de fade
+export class NavbarComponent implements OnInit {
+  isScrolled: boolean = false;
+  lastScrollTop: number = 0;
+  isFading: boolean = false;
+  isLandingPage: boolean = true;
 
-  @ViewChild('drawer') drawer!: MatSidenav; // Referência para o mat-sidenav (se for usado)
+  @ViewChild('drawer') drawer!: MatSidenav;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isLandingPage = event.urlAfterRedirects === '/inicio' || event.url === '/';
+        if (!this.isLandingPage) {
+          this.isScrolled = true; // Sempre mostra navbar fora da landing
+        }
+      }
+    });
+  }
 
-  // Intercepta a rolagem para verificar a posição
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
-    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    if (!this.isLandingPage) return; // Só aplica o scroll se for na landing
 
-    // Verifica se o topo da seção "sobre" está visível
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
     const sobreElement = document.getElementById('sobre');
+
     if (sobreElement) {
       const sobrePosition = sobreElement.offsetTop;
-      if (scrollY >= sobrePosition - window.innerHeight) {
-        this.isScrolled = true; // Mostra a navbar quando a seção "Sobre" é atingida
-      } else {
-        this.isScrolled = false; // Esconde a navbar quando não estiver na seção "Sobre"
-      }
+      this.isScrolled = scrollY >= sobrePosition - window.innerHeight;
     }
   }
 
-  // Função de navegação para seções específicas
   onNavigate(event: MouseEvent, section: string): void {
-    event.preventDefault(); // Impede o comportamento padrão de navegação
+    event.preventDefault();
 
     const element = document.getElementById(section);
     if (element) {
@@ -45,7 +51,6 @@ export class NavbarComponent {
     }
   }
 
-  // Função de rolagem para o topo
   scrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

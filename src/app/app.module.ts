@@ -12,6 +12,7 @@ import { ContatoModule } from './pages/secoes/contato/portfolio.module';
 import { RedesSociaisModule } from './pages/secoes/redes-sociais/redes-sociais.module';
 import { CardGalleryModule } from './components/card-gallery/card-gallery.module';
 import { InicioModule } from './pages/secoes/inicio/inicio.module';
+import { DetalharProjetoModule } from './pages/detalhar-projeto/detalhar-projeto.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -24,8 +25,9 @@ import { InicioModule } from './pages/secoes/inicio/inicio.module';
     NavbarModule,
     CardGalleryModule,
 
-    // Pages
+    // Pages/Seções
     InicioModule,
+    DetalharProjetoModule,
     SobreModule,
     PortfolioModule,
     ContatoModule,

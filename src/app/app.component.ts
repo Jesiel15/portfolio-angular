@@ -10,13 +10,24 @@ import { filter } from 'rxjs';
 })
 export class AppComponent {
   title = 'portfolio-angular';
-  // constructor(private router: Router, private route: ActivatedRoute) {
-  //   this.router.events
-  //     .pipe(filter((event) => event instanceof NavigationEnd))
-  //     .subscribe(() => {
-  //       this.scrollToFragment();
-  //     });
-  // }
+  mostrarLanding = true;
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.atualizarEstado(this.router.url); // <- resolve F5
+
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.atualizarEstado(event.urlAfterRedirects);
+      });
+  }
+
+  atualizarEstado(url: string) {
+    this.mostrarLanding = url === '/' || url === '/inicio';
+  }
+
   ngAfterViewChecked() {
     this.scrollToFragment();
   }

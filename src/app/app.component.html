@@ -1,22 +1,27 @@
-<!-- Menu superior -->
 <app-navbar></app-navbar>
 
-<div id="inicio">
-  <app-inicio></app-inicio>
-</div>
+<ng-container *ngIf="mostrarLanding; else routedContent">
+  <div id="inicio">
+    <app-inicio></app-inicio>
+  </div>
 
-<div id="sobre">
-  <app-sobre></app-sobre>
-</div>
+  <div id="sobre">
+    <app-sobre></app-sobre>
+  </div>
 
-<div id="portfolio">
-  <app-portfolio></app-portfolio>
-</div>
+  <div id="portfolio">
+    <app-portfolio></app-portfolio>
+  </div>
 
-<div id="contato">
-  <app-contato></app-contato>
-</div>
+  <div id="contato">
+    <app-contato></app-contato>
+  </div>
 
-<div id="redes-sociais">
-  <app-redes-sociais></app-redes-sociais>
-</div>
+  <div id="redes-sociais">
+    <app-redes-sociais></app-redes-sociais>
+  </div>
+</ng-container>
+
+<ng-template #routedContent>
+  <router-outlet></router-outlet>
+</ng-template>
