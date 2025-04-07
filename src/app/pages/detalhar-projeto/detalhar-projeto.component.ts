@@ -13,7 +13,7 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
   text: string = '';
   img: string = '';
   author: string = '';
-  linkProjeto: string = '';
+  site: string = '';
   imagens: string[] = [];
 
   constructor(private route: ActivatedRoute) {}
@@ -24,14 +24,14 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
       this.text = params['text'];
       this.img = params['img'];
       this.author = params['author'];
-      this.linkProjeto = params['linkProjeto'];
+      this.site = params['site'];
       this.imagens = params['imagens'];
-
     });
 
     // this.imagens[0] = this.img
     // this.imagens[1] = this.img;
     // this.imagens[2] = this.img;
+    alert(this.site)
     console.log('imagens --- ',this.imagens);
   }
 

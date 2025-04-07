@@ -15,6 +15,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/superheros/superheros1.png',
       category: 'Fullstack',
       tecnologia: 'Angular, Node Js e AWS EC2',
+      site: 'https://super-heros-tau.vercel.app/',
       projetoNumber: 1,
     },
     {
@@ -23,6 +24,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/vejoflix/vejoflix2.png',
       category: 'Fullstack',
       tecnologia: 'React js, Node Js e AWS EC2',
+      site: 'https://vejoflix.vercel.app/',
       projetoNumber: 2,
     },
     {
@@ -33,6 +35,7 @@ export class GalleryComponent implements OnInit {
       category: 'Fullstack',
       tecnologia:
         'Angular, Node JS, PHP, Dockers, Postman, AWS EC2, e Testes unitários.',
+      site: 'https://act-gerenciador-funcionarios.vercel.app/login',
       projetoNumber: 3,
     },
     {
@@ -41,6 +44,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/5.jpg',
       category: 'Web',
       tecnologia: '',
+      site: '',
       projetoNumber: 4,
     },
     {
@@ -49,6 +53,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/5.jpg',
       category: 'Web',
       tecnologia: '',
+      site: '',
       projetoNumber: 5,
     },
     {
@@ -58,6 +63,7 @@ export class GalleryComponent implements OnInit {
 
       category: 'Back',
       tecnologia: '',
+      site: '',
       projetoNumber: 6,
     },
     {
@@ -66,6 +72,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/7.jpg',
       category: 'Back',
       tecnologia: '',
+      site: '',
       projetoNumber: 7,
     },
     {
@@ -74,6 +81,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/7.jpg',
       category: 'Back',
       tecnologia: '',
+      site: '',
       projetoNumber: 8,
     },
     {
@@ -83,6 +91,7 @@ export class GalleryComponent implements OnInit {
 
       category: 'Web',
       tecnologia: '',
+      site: '',
       projetoNumber: 9,
     },
     {
@@ -91,6 +100,7 @@ export class GalleryComponent implements OnInit {
       image: 'assets/exemplos/7.jpg',
       category: 'Web',
       tecnologia: '',
+      site: '',
       projetoNumber: 10,
     },
   ];

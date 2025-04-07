@@ -29,25 +29,6 @@ export class AppComponent {
     this.mostrarLanding = url === '/' || url === '/inicio';
   }
 
-  // ngAfterViewInit() {
-  // const state = history.state;
-
-  // if (state && state.scrollTo) {
-  //   const targetSection = state.scrollTo;
-
-  //   const tryScroll = () => {
-  //     const element = document.getElementById(targetSection);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //     } else {
-  //       setTimeout(tryScroll, 100); // Espera até a seção estar no DOM
-  //     }
-  //   };
-
-  //   setTimeout(tryScroll, 200); // Pequeno atraso para garantir renderização
-  // }
-  // }
-
   ngAfterViewChecked() {
     const target = this.scrollService.getTarget();
     if (target) {

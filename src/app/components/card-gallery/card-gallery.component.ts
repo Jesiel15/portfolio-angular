@@ -19,6 +19,7 @@ export class CardGalleryComponent {
   @Input() projetoNumber: number = 0;
   @Input() comments: number = 0;
   @Input() img: string = '';
+  @Input() site: string = '';
 
   caminhoImagens = [
     {
@@ -79,6 +80,7 @@ export class CardGalleryComponent {
   }
 
   detalharProjeto() {
+    console.log('---------site', this.site, this.author)
     this.router.navigate(['/detalhar-projeto'], {
       queryParams: {
         title: this.title,
@@ -86,6 +88,7 @@ export class CardGalleryComponent {
         img: this.img,
         author: this.author,
         imagens: this.verificaProjeto(this.projetoNumber),
+        site: this.site
       },
     });
   }
