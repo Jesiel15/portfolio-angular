@@ -27,12 +27,6 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
       this.site = params['site'];
       this.imagens = params['imagens'];
     });
-
-    // this.imagens[0] = this.img
-    // this.imagens[1] = this.img;
-    // this.imagens[2] = this.img;
-    alert(this.site)
-    console.log('imagens --- ',this.imagens);
   }
 
   ngAfterViewInit(): void {

@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
-  padding: 20px;
+  padding: 0em 0px 0px 10em;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -12,7 +12,7 @@
 
 .swiper-container {
   width: 50%;
-  padding-top: 10em;
+  padding-top: 11em;
 
   .swiper-slide {
     display: flex;
@@ -33,10 +33,12 @@
 }
 
 .detalhar-info {
+  // background-color: #175050;
+
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 9em;
 
   .detalhar-title {
     font-size: 2rem;
@@ -49,16 +51,71 @@
   }
 
   .btn-acessar {
+    width: 20%;
     padding: 0.75rem 1.5rem;
-    background-color: #0d1c1c;
+    background-color: #00d1d1;
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
 
     &:hover {
       background-color: darken(#00d1d1, 10%);
       // background-color: darken(#ff4800, 10%);
     }
   }
+
+  .btn-voltar {
+    width: 20%;
+    padding: 0.75rem 1.5rem;
+    background-color: #0d1c1c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      background-color: darken(#00d1d1, 20%);
+      // background-color: darken(#ff4800, 10%);
+    }
+  }
+
+  .container-button {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 11.5em;
+  }
+
+  /* Icones de tecnologias no Detalhar projeto*/
+  .tecnologias-usadas {
+    // margin-top: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .icones-tecnologias {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      img {
+        height: 40px;
+        width: auto;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  /* FIM Icones de tecnologias no Detalhar projeto*/
 }

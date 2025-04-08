@@ -11,7 +11,7 @@ export class GalleryComponent implements OnInit {
     {
       title: 'Super Heros',
       description:
-        'Projeto criado para ideias de heróis com seus poderes e características.',
+        'Este projeto foi desenvolvido para gerenciar e armazenar informações de heróis fictícios. A aplicação permite cadastrar novos personagens com dados personalizados como nome, descrição, poder, sexo, origem e imagem. Cada herói possui uma identidade única e pode ser visualizado com seus respectivos detalhes. O sistema foi pensado com foco em uma interface intuitiva, onde o usuário pode adicionar, editar e visualizar heróis de maneira rápida e eficiente. Além disso, o projeto conta com suporte ao upload e exibição de imagens, garantindo uma apresentação visual imersiva dos personagens.',
       image: 'assets/superheros/superheros1.png',
       category: 'Fullstack',
       tecnologia: 'Angular, Node Js e AWS EC2',
