@@ -35,9 +35,14 @@ export class CardGalleryComponent {
       tecnologias: [
         '../../../assets/logos_coloridas/angular.png',
         '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/vscode.png',
+        '../../../assets/logos_coloridas/insomnia.png',
         '../../../assets/logos_coloridas/nodejs.png',
         '../../../assets/logos_coloridas/scss.png',
         '../../../assets/logos_coloridas/aws.png',
+        '../../../assets/logos_coloridas/krita.png',
+        '../../../assets/logos_coloridas/figma.png',
+        '../../../assets/logos_coloridas/json.png',
       ],
     },
     {
@@ -57,9 +62,12 @@ export class CardGalleryComponent {
       tecnologias: [
         '../../../assets/logos_coloridas/react.png',
         '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/vscode.png',
+        '../../../assets/logos_coloridas/insomnia.png',
         '../../../assets/logos_coloridas/nodejs.png',
         '../../../assets/logos_coloridas/scss.png',
         '../../../assets/logos_coloridas/aws.png',
+        '../../../assets/logos_coloridas/json.png',
       ],
     },
     {
@@ -76,10 +84,15 @@ export class CardGalleryComponent {
       ],
       tecnologias: [
         '../../../assets/logos_coloridas/angular.png',
-        '../../../assets/logos_coloridas/nodejs.png',
         '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/angularMaterial.png',
+        '../../../assets/logos_coloridas/nodejs.png',
         '../../../assets/logos_coloridas/scss.png',
         '../../../assets/logos_coloridas/aws.png',
+        '../../../assets/logos_coloridas/php.png',
+        '../../../assets/logos_coloridas/postman.png',
+        '../../../assets/logos_coloridas/dockers.png',
+        '../../../assets/logos_coloridas/json.png',
       ],
     },
     {

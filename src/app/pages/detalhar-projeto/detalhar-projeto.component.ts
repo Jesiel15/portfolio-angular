@@ -29,8 +29,6 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
       this.imagens = params['imagens'];
       this.tecnologias = params['tecnologias'];
     });
-
-    alert(this.tecnologias);
   }
 
   ngAfterViewInit(): void {
