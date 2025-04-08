@@ -10,8 +10,8 @@
 }
 
 .swiper-container {
-  width: 50%;
-  padding-top: 11em;
+  width: 60%;
+  padding-top: 5em;
 
   .swiper-slide {
     display: flex;
@@ -19,11 +19,14 @@
     align-items: center;
 
     img {
-      width: 90%;
-      height: 90%;
-      object-fit: auto;
+      // width: 90%;
+      // height: 90%;
+      // object-fit: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       border-radius: 12px;
-      box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+      // box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -38,7 +41,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 9em;
+  padding-top: 6em;
 
   .detalhar-title {
     font-size: 2rem;
@@ -88,7 +91,7 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    padding-top: 11.5em;
+    padding-top: 5em;
   }
 
   /* Icones de tecnologias no Detalhar projeto*/

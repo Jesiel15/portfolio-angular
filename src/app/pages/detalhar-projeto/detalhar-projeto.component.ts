@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-detalhar-projeto',
@@ -17,7 +18,11 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
   imagens: string[] = [];
   tecnologias: string[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private scrollService: ScrollService
+  ) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
@@ -62,5 +67,21 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
     const nomeArquivo = partes[partes.length - 1]; // ex: react.png
     const nomeSemExtensao = nomeArquivo.split('.')[0]; // ex: react
     return nomeSemExtensao.charAt(0).toUpperCase() + nomeSemExtensao.slice(1); // React
+  }
+
+  onNavigate(event: MouseEvent, section: string): void {
+    event.preventDefault();
+
+    const currentUrl = this.router.url.split('#')[0];
+
+    if (currentUrl === '/' || currentUrl === '/inicio') {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      this.scrollService.setTarget(section);
+      this.router.navigateByUrl('/');
+    }
   }
 }

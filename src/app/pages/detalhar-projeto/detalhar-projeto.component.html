@@ -33,8 +33,12 @@
 
     <div class="container-button">
       <a [href]="site" target="_blank" class="btn-acessar">Ver Projeto</a>
-      <!-- TODO: Redirecionar para tela principal no portfólio -->
-      <a [href]="" target="_blank" class="btn-voltar">Voltar</a>
+      <a
+        (click)="onNavigate($event, 'portfolio')"
+        target="_blank"
+        class="btn-voltar"
+        >Voltar</a
+      >
     </div>
   </div>
 </div>
