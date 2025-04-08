@@ -15,6 +15,7 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
   author: string = '';
   site: string = '';
   imagens: string[] = [];
+  tecnologias: string[] = [];
 
   constructor(private route: ActivatedRoute) {}
 
@@ -26,7 +27,10 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
       this.author = params['author'];
       this.site = params['site'];
       this.imagens = params['imagens'];
+      this.tecnologias = params['tecnologias'];
     });
+
+    alert(this.tecnologias);
   }
 
   ngAfterViewInit(): void {
@@ -53,5 +57,12 @@ export class DetalharProjetoComponent implements OnInit, AfterViewInit {
         });
       }, 0);
     });
+  }
+
+  extrairNome(caminho: string): string {
+    const partes = caminho.split('/');
+    const nomeArquivo = partes[partes.length - 1]; // ex: react.png
+    const nomeSemExtensao = nomeArquivo.split('.')[0]; // ex: react
+    return nomeSemExtensao.charAt(0).toUpperCase() + nomeSemExtensao.slice(1); // React
   }
 }

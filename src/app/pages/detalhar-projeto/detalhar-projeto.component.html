@@ -18,6 +18,19 @@
     <h2 class="detalhar-title">{{ title }}</h2>
     <p class="detalhar-descricao">{{ text }}</p>
 
+    <!-- Tecnologias utilizadas -->
+    <div class="tecnologias-usadas" *ngIf="tecnologias.length">
+      <h3>Tecnologias Utilizadas</h3>
+      <div class="icones-tecnologias">
+        <img
+          *ngFor="let tecnologia of tecnologias"
+          [src]="tecnologia"
+          [alt]="extrairNome(tecnologia)"
+          [title]="extrairNome(tecnologia)"
+        />
+      </div>
+    </div>
+
     <div class="container-button">
       <a [href]="site" target="_blank" class="btn-acessar">Ver Projeto</a>
       <!-- TODO: Redirecionar para tela principal no portfólio -->

@@ -21,7 +21,7 @@ export class CardGalleryComponent {
   @Input() img: string = '';
   @Input() site: string = '';
 
-  caminhoImagens = [
+  caminhoImgsETecs = [
     {
       nome: 'SuperHeros',
       imagens: [
@@ -31,6 +31,13 @@ export class CardGalleryComponent {
         'assets/superheros/superheros4.png',
         'assets/superheros/superheros5.png',
         'assets/superheros/superheros6.png',
+      ],
+      tecnologias: [
+        '../../../assets/logos_coloridas/angular.png',
+        '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/nodejs.png',
+        '../../../assets/logos_coloridas/scss.png',
+        '../../../assets/logos_coloridas/aws.png',
       ],
     },
     {
@@ -47,6 +54,13 @@ export class CardGalleryComponent {
         'assets/vejoflix/vejoflix-del.png',
         'assets/vejoflix/vejoflix-del1.png',
       ],
+      tecnologias: [
+        '../../../assets/logos_coloridas/react.png',
+        '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/nodejs.png',
+        '../../../assets/logos_coloridas/scss.png',
+        '../../../assets/logos_coloridas/aws.png',
+      ],
     },
     {
       nome: 'ActChallenger',
@@ -59,6 +73,13 @@ export class CardGalleryComponent {
         'assets/act_challenger/alterar_senha.png',
         'assets/act_challenger/alterar_senha_erro.png',
         'assets/act_challenger/modal_confirmacao.png',
+      ],
+      tecnologias: [
+        '../../../assets/logos_coloridas/angular.png',
+        '../../../assets/logos_coloridas/nodejs.png',
+        '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/scss.png',
+        '../../../assets/logos_coloridas/aws.png',
       ],
     },
     {
@@ -80,7 +101,7 @@ export class CardGalleryComponent {
   }
 
   detalharProjeto() {
-    console.log('---------site', this.site, this.author)
+    console.log('---------site', this.site, this.author);
     this.router.navigate(['/detalhar-projeto'], {
       queryParams: {
         title: this.title,
@@ -88,12 +109,18 @@ export class CardGalleryComponent {
         img: this.img,
         author: this.author,
         imagens: this.verificaProjeto(this.projetoNumber),
-        site: this.site
+        site: this.site,
+        tecnologias: this.verificaTecnologias(this.projetoNumber),
       },
     });
   }
 
   verificaProjeto(projetoNumber: number) {
-    return this.caminhoImagens[projetoNumber - this.DIMINUIR_INDEX].imagens;
+    return this.caminhoImgsETecs[projetoNumber - this.DIMINUIR_INDEX].imagens;
+  }
+
+  verificaTecnologias(projetoNumber: number) {
+    return this.caminhoImgsETecs[projetoNumber - this.DIMINUIR_INDEX]
+      .tecnologias;
   }
 }
