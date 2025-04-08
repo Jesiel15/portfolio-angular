@@ -85,6 +85,7 @@ export class CardGalleryComponent {
       tecnologias: [
         '../../../assets/logos_coloridas/angular.png',
         '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/vscode.png',
         '../../../assets/logos_coloridas/angularMaterial.png',
         '../../../assets/logos_coloridas/nodejs.png',
         '../../../assets/logos_coloridas/scss.png',
