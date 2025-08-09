@@ -52,20 +52,6 @@ a {
   font-size: 20px;
 }
 
-@media screen and (max-width: 768px) {
-  // .desktop-menu {
-  //   display: none;
-  // }
-
-  // .menu-toggle {
-  //   display: block;
-  // }
-
-  a {
-    font-size: 15px;
-  }
-}
-
 .sidenav-container {
   display: flex;
   // height: 100%;
@@ -102,4 +88,46 @@ mat-sidenav-content {
   height: 12px;
   padding: 15px;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  // .desktop-menu {
+  //   display: none;
+  // }
+
+  // .menu-toggle {
+  //   display: block;
+  // }
+  .imagem {
+    width: 100%;
+    height: 02px;
+    padding: 15px;
+  }
+  a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  a {
+    font-size: 15px;
+  }
+  .imagem {
+    width: 100%;
+    height: 02px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  a {
+    font-size: 15px;
+  }
+  .imagem {
+    width: 100%;
+    min-width: 120px;
+    height: 15px;
+    padding: 0px;
+    margin-left: 0px;
+  }
 }
