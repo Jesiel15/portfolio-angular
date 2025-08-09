@@ -47,13 +47,22 @@
   ); // Um leve fundo pode ajudar na visibilidade
   // border-radius: 5px;
 }
-@media screen and (max-width: 768px) {
-  .desktop-menu {
-    display: none;
-  }
 
-  .menu-toggle {
-    display: block;
+a {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  // .desktop-menu {
+  //   display: none;
+  // }
+
+  // .menu-toggle {
+  //   display: block;
+  // }
+
+  a {
+    font-size: 15px;
   }
 }
 
