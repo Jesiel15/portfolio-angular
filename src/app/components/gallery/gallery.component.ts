@@ -38,6 +38,17 @@ export class GalleryComponent implements OnInit {
       site: 'https://act-gerenciador-funcionarios.vercel.app/login',
       projetoNumber: 3,
     },
+    {
+      title: 'Desafio Front-end 48h',
+      description:
+        'Desafio técnico realizado em 48h para uma entrevista de emprego.',
+      image: 'assets/desafio-anota-ai/desafio-anota-ai-home.png',
+      category: 'Front',
+      tecnologia:
+        'Angular 17, Node JS, SCSS e Testes unitários',
+      site: 'https://desafio-front-end-inky-eta.vercel.app',
+      projetoNumber: 4,
+    },
   ];
 
   filteredProjects = this.projects; // Inicialmente, exibe todos os projetos

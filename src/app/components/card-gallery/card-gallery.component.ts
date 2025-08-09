@@ -94,11 +94,27 @@ export class CardGalleryComponent {
         '../../../assets/logos_coloridas/postman.png',
         '../../../assets/logos_coloridas/dockers.png',
         '../../../assets/logos_coloridas/json.png',
+        '../../../assets/logos_coloridas/karma.png',
       ],
     },
     {
-      nome: 'projeto4',
-      imagens: [],
+      nome: 'DesafioAnotaAi',
+      imagens: [
+        'assets/desafio-anota-ai/desafio-anota-ai-home.png',
+        'assets/desafio-anota-ai/desafio-anota-ai-titulo1.png',
+        'assets/desafio-anota-ai/desafio-anota-ai-titulo2.png',
+        'assets/desafio-anota-ai/desafio-anota-ai-texto.png',
+      ],
+      tecnologias: [
+        '../../../assets/logos_coloridas/angular.png',
+        '../../../assets/logos_coloridas/typescript.png',
+        '../../../assets/logos_coloridas/vscode.png',
+        '../../../assets/logos_coloridas/angularMaterial.png',
+        '../../../assets/logos_coloridas/nodejs.png',
+        '../../../assets/logos_coloridas/scss.png',
+        '../../../assets/logos_coloridas/json.png',
+        '../../../assets/logos_coloridas/karma.png',
+      ]
     },
   ];
 
