@@ -3,7 +3,7 @@
 // INICIO Swiper
 .swiper-container {
   padding-top: 10vh;
-  margin-left: 28vh;
+  // margin-left: 28vh;
   width: 73%;
   height: 250px;
 }
@@ -67,3 +67,18 @@ img {
   object-fit: contain;
   display: block;
 }
+
+@media (max-width: 1200px) {
+  .swiper-container {
+  padding-left: 0;
+  grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-container {
+    grid-template-columns: repeat(1, 1fr);
+  padding-left: 0;
+  }
+}
+

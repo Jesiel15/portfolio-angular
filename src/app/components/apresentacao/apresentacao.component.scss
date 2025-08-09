@@ -34,10 +34,10 @@
 .hero__title {
   font-size: 40px;
   font-weight: bold;
-  // text-transform: uppercase;
   color: var(--color-white);
   text-shadow: black 0.2em 0.2em 0.2em;
-  padding-left: 1em; // se quiser manter o alinhamento como se fosse código
+  padding-left: 1em;
+  white-space: nowrap; // Adicione esta linha para evitar quebra de linha
 
   .typing__module .typed {
     display: inline-block;
@@ -47,12 +47,71 @@
 }
 
 @media (min-width: 320px) {
+  .hero {
+    margin-left: -5%;
+    white-space: nowrap;
+  }
+
   .hero__title {
-    font-size: calc(4.54545vw + 25.45455px);
+    font-size: calc(2.54545vw + 20.45455px);
+  }
+
+  .hero__text {
+    margin: 0;
+    font-size: 28px;
+    color: var(--color-white);
+    text-shadow: black 0.2em 0.1em 0.1em;
+    font-family: "Poppins", sans-serif;
+
+    .align-doctype {
+      color: var(--color-error);
+    }
+    .html-tag {
+      color: var(--color-white);
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .hero {
+    margin-left: 5vh;
+    white-space: nowrap;
+  }
+
+  .hero__title {
+    font-size: calc(3.54545vw + 25.45455px);
+  }
+
+  .hero__text {
+    margin: 10px;
+    font-size: 32px;
+    color: var(--color-white);
+    text-shadow: black 0.2em 0.1em 0.1em;
+    font-family: "Poppins", sans-serif;
+
+    .align-doctype {
+      color: var(--color-error);
+    }
+    .html-tag {
+      color: var(--color-white);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin-left: 20%;
+  }
+  .hero__title {
+    font-size: 60px;
   }
 }
 
 @media (min-width: 1200px) {
+  .hero {
+    margin-left: 30%;
+  }
+
   .hero__title {
     font-size: 80px;
   }

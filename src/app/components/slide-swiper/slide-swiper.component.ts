@@ -28,17 +28,28 @@ export class SlideSwiperComponent implements AfterViewInit {
         disableOnInteraction: false,
       },
       breakpoints: {
+        // Desktop
         1200: {
           slidesPerView: 3,
           spaceBetween: 20,
         },
+        // Tablet
         768: {
           slidesPerView: 2,
           spaceBetween: 15,
         },
+        // Celular
         576: {
           slidesPerView: 1,
           spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 100,
         },
       },
     });
