@@ -56,15 +56,23 @@
 
 @media (max-width: 1200px) {
   .gallery-container {
-  padding-left: 8vh;
-  grid-template-columns: repeat(2, 1fr); 
+    padding-left: 8vh;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .gallery-container {
     grid-template-columns: repeat(1, 1fr);
-  padding-left: 6vh;
+    padding-left: 4.5vh;
+  }
+
+  .filter-container button {
+    padding: 8px 20px;
+    margin: 4px 6px;
+  }
+
+  .filter-container {
+    padding: 20px 0px 0px 0px;
   }
 }
-

@@ -30,21 +30,21 @@
   .container-sobre {
     padding-left: 10vh;
   }
-  
+
   .container-eu-sou {
     padding-left: 5vh; // Ajuste para telas intermediárias
     padding-right: 5vh;
   }
-  
-.imagem {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../../../../assets/figura.jpg");
-  width: 120vh;
-  height: 40vh;
-  padding: 10px;
-}
+
+  .imagem {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../../../../assets/figura.jpg");
+    width: 120vh;
+    height: 40vh;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -52,12 +52,12 @@
     display: flex;
     flex-direction: column; // Empilha a imagem acima do texto
     align-items: center; // Centraliza os itens no eixo cruzado
-    padding-left: 0;
+    padding-left: 0vh;
+    width: 100%;
   }
 
   .container-eu-sou {
-    padding-left: 2vh; // Ajuste o padding para telas pequenas
-    padding-right: 2vh;
+    padding: 0;
     h1 {
       text-align: center; // Centraliza o título
     }
